@@ -24,6 +24,16 @@ def coverage_sample(df, amount_col, target_coverage=0.6):
 # Streamlit UI
 st.title("Audit Sampling Assistant")
 
+st.markdown("""
+### Note!
+Please upload excel files with columns in this order:
+1. Invoice #
+2. Vendor
+3. Amount
+4. Date
+""")
+
+
 uploaded_file = st.file_uploader("Upload an Excel or CSV file", type=["xlsx", "csv"])
 
 if uploaded_file:
